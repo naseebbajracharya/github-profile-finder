@@ -5,6 +5,10 @@ import Users from './components/users/Users';
 
 class App extends Component {
 
+  componentDidMount() {
+    
+  }
+
   render () {
     return (
       <div className="App">
