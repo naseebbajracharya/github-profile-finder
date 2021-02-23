@@ -7,6 +7,7 @@
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
+  --primary2-color: #098ab1;
 }
 
 * {
@@ -84,6 +85,10 @@ img {
 
 .text-danger {
   color: var(--danger-color);
+}
+
+.text-primary2 {
+  color: var(--primary2-color);
 }
 
 .text-center {
@@ -291,6 +296,15 @@ img {
 .alert-white {
   background: #fff;
   color: #333;
+  border: #ccc solid 1px;
+}
+
+.btn-primary2,
+.bg-primary2,
+.badge-primary2,
+.alert-primary2 {
+  background: #098ab1;
+  color: rgb(240, 240, 240);
   border: #ccc solid 1px;
 }
 
