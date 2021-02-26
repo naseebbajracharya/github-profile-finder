@@ -12,15 +12,15 @@ class App extends Component {
     loading: false
   }
 
-  async componentDidMount() {
-    this.setState({loading: true});
+  // async componentDidMount() {
+  //   this.setState({loading: true});
 
-    const res = await axios.get(`https://api.github.com/users?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`);
+  //   const res = await axios.get(`https://api.github.com/users?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`);
 
-    //console.log(res.data);
+  //   //console.log(res.data);
 
-    this.setState({users: res.data, loading: false});
-  }
+  //   this.setState({users: res.data, loading: false});
+  // }
 
   //search for github users
   searchUsers = async (text) => {
