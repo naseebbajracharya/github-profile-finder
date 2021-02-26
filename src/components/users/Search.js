@@ -6,6 +6,10 @@ export class Search extends Component {
         text: ''
     }
 
+    onChange = (e) => {
+        this.setState({text: e.target.value});
+    }
+
     render() {
         return (
             <div>
