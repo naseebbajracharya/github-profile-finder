@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users';
 import axios from 'axios';
 import Search from './components/users/Search';
+import Alert from './components/layout/Alert';
 
 class App extends Component {
 
@@ -42,6 +43,7 @@ class App extends Component {
 
   setAlert = (msg, type) => {
     this.setState({alert: {msg:msg, type:type}});
+    setTimeout(() => this.setState({alert:null}), 2100);
   }
 
   render () {
@@ -52,6 +54,7 @@ class App extends Component {
       <div className="App">
         <Navbar title="Github Profile Finder" icon="fab fa-github" />
         <div className="container">
+          <Alert alert={this.state.alert} />
           <Search searchUsers={this.searchUsers} clearUsers={this.clearUsers} showClear={this.state.users.length > 0 ? true:false} setAlert={this.setAlert}/>
           <Users loading={loading} users={users}/>
         </div>
