@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import Spinner from './../layout/Spinner';
 import { PropTypes } from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export class User extends Component {
 
@@ -25,9 +26,12 @@ export class User extends Component {
         if(loading) return <Spinner />
 
         return (
-            <div>
-                {name}
-            </div>
+            <Fragment>
+                <Link to='/' className='btn btn-dark'>Go Back</Link>
+
+                Hireable: {''}
+                {hireable ? (<i className='fas fa-check text-success' />) : (<i className='fas fa-times-circle text-danger' />)}
+            </Fragment>
         );
     }
 }
