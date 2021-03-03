@@ -12,9 +12,11 @@ export class User extends Component {
             name, avatar_url, location, bio, blog, login, html_url, followers, following, public_repos, public_gists, hireable
         } = this.props.user;
 
+        const {loading} = this.props;
+
         return (
             <div>
-                User
+                {name}
             </div>
         )
     }
