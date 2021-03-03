@@ -18,7 +18,7 @@ export class User extends Component {
     render() {
 
         const {
-            name, avatar_url, location, bio, blog, login, html_url, followers, following, public_repos, public_gists, hireable
+            name, avatar_url, location, bio, blog, login, html_url, followers, following, public_repos, public_gists, hireable, company
         } = this.props.user;
 
         const {loading} = this.props;
@@ -35,7 +35,29 @@ export class User extends Component {
                 <div className="card grid-2">
                     <div className="all-center">
                         <img src={avatar_url} className="round-img" alt="Avatar" style={{width: '180px'}}/>
+                        <h1>{name}</h1>
+                        <p>From: {location}</p>
                     </div>
+
+                    <div>
+                        {bio && (<Fragment> <h3>Bio</h3><p>{bio}</p></Fragment>)}
+                        <a href={html_url} className="btn btn-dark my-1">View Github Profile</a>
+
+                        <ul>
+                            <li>
+                            {login && (<Fragment> <strong>Username:</strong> {login}</Fragment>)}
+                            </li>
+
+                            <li>
+                            {company && (<Fragment> <strong>Company:</strong> {company}</Fragment>)}
+                            </li>
+
+                            <li>
+                            {blog && (<Fragment> <strong>Website:</strong> {blog}</Fragment>)}
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </Fragment>
         );
