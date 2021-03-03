@@ -22,11 +22,13 @@ export class User extends Component {
 
         const {loading} = this.props;
 
+        if(loading) return <Spinner />
+
         return (
             <div>
                 {name}
             </div>
-        )
+        );
     }
 }
 
