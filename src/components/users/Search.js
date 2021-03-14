@@ -1,12 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 
 
 const Search = ({searchUsers, showClear, clearUsers}) => {
 
-    state = {
-        text: ''
-    }
+    
 
 
     const onSubmit = (e) => {
