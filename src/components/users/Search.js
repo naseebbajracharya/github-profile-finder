@@ -20,14 +20,14 @@ const Search = ({searchUsers, showClear, clearUsers}) => {
     }
 
     const onChange = (e) => {
-        this.setState({[e.target.name]: e.target.value});
+        setText(e.target.value);
     }
 
 
         return (
             <div>
                 <form onSubmit={this.onSubmit} className="form">
-                    <input type="text" name="text" placeholder="Search Github Profile" value={this.state.text} onChange={this.onChange}/>
+                    <input type="text" name="text" placeholder="Search Github Profile" value={text} onChange={onChange}/>
                     <input type="submit" value="Search" className="btn btn-dark btn-block"/>
                 </form>
                 {showClear && (<button className="btn btn-light btn-block" onClick={clearUsers}>Clear</button>)}
