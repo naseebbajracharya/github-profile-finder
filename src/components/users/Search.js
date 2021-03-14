@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Search = ({searchUsers, showClear, clearUsers}) => {
 
-    
+    const [text, setText] = useState('');
 
 
     const onSubmit = (e) => {
