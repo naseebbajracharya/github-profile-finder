@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const Search = () => {
+const Search = ({searchUsers, showClear, clearUsers}) => {
 
     state = {
         text: ''
     }
 
 
-    onSubmit = (e) => {
+    const onSubmit = (e) => {
         e.preventDefault();
 
         if(this.state.text == ''){
@@ -21,13 +21,10 @@ const Search = () => {
 
     }
 
-    onChange = (e) => {
+    const onChange = (e) => {
         this.setState({[e.target.name]: e.target.value});
     }
 
-    render() {
-
-        const {showClear, clearUsers} = this.props;
 
         return (
             <div>
@@ -40,7 +37,6 @@ const Search = () => {
 
             </div>
         )
-    }
 }
 
 Search.propTypes = {
