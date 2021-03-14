@@ -1,19 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 
-export class Search extends Component {
+const Search = () => {
 
     state = {
         text: ''
     }
 
-    static propTypes = {
-        searchUsers: PropTypes.func.isRequired,
-        clearUsers: PropTypes.func.isRequired,
-        showClear: PropTypes.bool.isRequired,
-        setAlert: PropTypes.func.isRequired,
-    }
 
     onSubmit = (e) => {
         e.preventDefault();
@@ -47,6 +41,13 @@ export class Search extends Component {
             </div>
         )
     }
+}
+
+Search.propTypes = {
+    searchUsers: PropTypes.func.isRequired,
+    clearUsers: PropTypes.func.isRequired,
+    showClear: PropTypes.bool.isRequired,
+    setAlert: PropTypes.func.isRequired,
 }
 
 export default Search;
