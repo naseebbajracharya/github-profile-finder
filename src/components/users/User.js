@@ -4,12 +4,12 @@ import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 import Repos from '../repos/Repos';
 
-const User = ({user, loading, getUser, getRepos, repos, match}) => {
+const User = ({user, loading, getUser, getUserRepos, repos, match}) => {
 
-    componentDidMount() {
-        this.props.getUser(match.params.login);
-        this.props.getUserRepos(match.params.login);
-    }
+    useEffect(() => {
+        getUser(match.params.login);
+        getUserRepos(match.params.login);
+    }, []);
 
 
         const {

@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {useState, Fragment} from 'react';
 import './App.css';
 import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users';
@@ -9,7 +9,13 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import About from './components/pages/About';
 import User from './components/users/User';
 
-class App extends Component {
+const App = () => {
+
+  const [users, setUsers] = useState([]);
+  const [users, setUser] = useState({});
+  const [repos, setRepos] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [alert, setAlert] = useState(null);
 
   state = {
     users: [],
