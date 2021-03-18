@@ -32,7 +32,7 @@ const GithubState = props => {
         dispatch({
             type: SEARCH_USERS,
             payload: res.data
-        })
+        });
     }
 
     //get user
