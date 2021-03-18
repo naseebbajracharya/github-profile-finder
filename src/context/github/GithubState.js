@@ -31,7 +31,7 @@ const GithubState = props => {
 
         dispatch({
             type: SEARCH_USERS,
-            payload: res.data
+            payload: res.data.items
         });
     }
 
@@ -44,7 +44,7 @@ const GithubState = props => {
     //set loading
     const setLoading = () => dispatch({type: SET_LOADING});
 
-return <GithubContext.Provider value={{users: state.users, user: state.user, repos:state.repos, loading:state.loading}}>{props.children}</GithubContext.Provider>
+return <GithubContext.Provider value={{users: state.users, user: state.user, repos:state.repos, loading:state.loading, searchUsers}}>{props.children}</GithubContext.Provider>
 }
 
 export default GithubState;
