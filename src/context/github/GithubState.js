@@ -57,7 +57,7 @@ const GithubState = props => {
     //set loading
     const setLoading = () => dispatch({type: SET_LOADING});
 
-return <GithubContext.Provider value={{users: state.users, user: state.user, repos:state.repos, loading:state.loading, searchUsers, clearUsers}}>{props.children}</GithubContext.Provider>
+return <GithubContext.Provider value={{users: state.users, user: state.user, repos:state.repos, loading:state.loading, searchUsers, clearUsers, getUser}}>{props.children}</GithubContext.Provider>
 }
 
 export default GithubState;
