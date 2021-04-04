@@ -33,7 +33,7 @@ const Search = ({ setAlert}) => {
                     <input type="text" name="text" placeholder="Search Github Profile" value={text} onChange={onChange}/>
                     <input type="submit" value="Search" className="btn btn-dark btn-block"/>
                 </form>
-                {GithubContext.users.length > 0 && (<button className="btn btn-light btn-block" onClick={clearUsers}>Clear</button>)}
+                {GithubContext.users.length > 0 && (<button className="btn btn-light btn-block" onClick={GithubContext.clearUsers}>Clear</button>)}
                 
 
             </div>
@@ -41,8 +41,6 @@ const Search = ({ setAlert}) => {
 }
 
 Search.propTypes = {
-    clearUsers: PropTypes.func.isRequired,
-    showClear: PropTypes.bool.isRequired,
     setAlert: PropTypes.func.isRequired,
 }
 

@@ -40,12 +40,12 @@ const GithubState = props => {
     //get user repos
 
     //clear user from state
-    const clearUsers = () => dispatch({tyoe: CLEAR_USERS});
+    const clearUsers = () => dispatch({type: CLEAR_USERS});
 
     //set loading
     const setLoading = () => dispatch({type: SET_LOADING});
 
-return <GithubContext.Provider value={{users: state.users, user: state.user, repos:state.repos, loading:state.loading, searchUsers}}>{props.children}</GithubContext.Provider>
+return <GithubContext.Provider value={{users: state.users, user: state.user, repos:state.repos, loading:state.loading, searchUsers, clearUsers}}>{props.children}</GithubContext.Provider>
 }
 
 export default GithubState;
