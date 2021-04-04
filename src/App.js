@@ -13,7 +13,7 @@ import GithubState from './context/github/GithubState';
 const App = () => {
 
   const [users, setUsers] = useState([]);
-  const [users, setUser] = useState({});
+  const [user, setUser] = useState({});
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState(null);
@@ -76,7 +76,7 @@ const App = () => {
             <Route exact path='/' render={props => (
               <Fragment>
                 <Search clearUsers={clearUsers} showClear={users.length > 0 ? true:false} setAlert={showAlert}/>
-                <Users loading={loading} users={users}/>
+                <Users/>
               </Fragment>
             )}></Route>
 

@@ -5,7 +5,7 @@ import githubContext from './../../context/github/githubContext';
 
 const Search = ({ showClear, clearUsers, setAlert}) => {
 
-    const githubContext = useContext(GithubContext);
+    const GithubContext = useContext(githubContext);
 
     const [text, setText] = useState('');
 
@@ -16,7 +16,7 @@ const Search = ({ showClear, clearUsers, setAlert}) => {
         if(text == ''){
             setAlert('Empty Field!', 'danger');
         } else {
-            githubContext.searchUsers(text);
+            GithubContext.searchUsers(text);
             setText('');
         }
 
