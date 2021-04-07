@@ -9,14 +9,12 @@ const User = ({ match}) => {
 
     const GithubContext = useContext(githubContext);
 
-    const {getUser, loading, user} = GithubContext;
+    const {getUser, loading, user, repos, getUserRepos} = GithubContext;
 
     useEffect(() => {
         getUser(match.params.login);
         getUserRepos(match.params.login);
     }, []);
-
-       
 
 
         const {
