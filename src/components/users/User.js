@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Repos from '../repos/Repos';
 import githubContext from './../../context/github/githubContext';
 
-const User = ({ getUserRepos, repos, match}) => {
+const User = ({ match}) => {
 
     const GithubContext = useContext(githubContext);
 
@@ -72,11 +72,6 @@ const User = ({ getUserRepos, repos, match}) => {
                 <Repos repos={repos} />
             </Fragment>
         );
-}
-
-User.propTypes = {
-    repos: PropTypes.array.isRequired,
-    getUserRepos: PropTypes.func.isRequired,
 }
 
 export default User;
