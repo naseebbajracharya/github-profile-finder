@@ -13,6 +13,15 @@ const AlertState = props => {
 
     
     //SET ALERT
+    const setAlert = (msg, type) => {
+        dispatch({
+            type: SET_ALERT,
+            payload: {msg, type}
+        });
+
+        setTimeout(() => dispatch({type:REMOVE_ALERT}), 2100);
+      }
+
     return <AlertContext.Provider value={{alert: state, setAlert}}>{props.children}</AlertContext.Provider>
 }
 
