@@ -8,7 +8,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import About from './components/pages/About';
 import User from './components/users/User';
 import GithubState from './context/github/GithubState';
-import AlertState from './context/github/AlertState';
+import AlertState from './context/alert/AlertState';
 
 const App = () => {
 
