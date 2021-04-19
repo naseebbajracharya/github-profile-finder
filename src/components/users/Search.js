@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import githubContext from './../../context/github/githubContext';
 
 
-const Search = ({ setAlert}) => {
+const Search = () => {
 
     const GithubContext = useContext(githubContext);
 
@@ -40,8 +40,5 @@ const Search = ({ setAlert}) => {
         )
 }
 
-Search.propTypes = {
-    setAlert: PropTypes.func.isRequired,
-}
 
 export default Search;
