@@ -1,11 +1,11 @@
 import React, {useState, useContext} from 'react';
-import PropTypes from 'prop-types';
 import githubContext from './../../context/github/githubContext';
-
+import alertContext from './../../context/alert/alertContext';
 
 const Search = () => {
 
     const GithubContext = useContext(githubContext);
+    const AlertContext = useContext(alertContext);
 
     const [text, setText] = useState('');
 
@@ -14,7 +14,7 @@ const Search = () => {
         e.preventDefault();
 
         if(text == ''){
-            setAlert('Empty Field!', 'danger');
+            AlertContext.setAlert('Empty Field!', 'danger');
         } else {
             GithubContext.searchUsers(text);
             setText('');
