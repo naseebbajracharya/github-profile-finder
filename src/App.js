@@ -12,8 +12,6 @@ import AlertState from './context/github/AlertState';
 
 const App = () => {
 
-  const [alert, setAlert] = useState(null);
-
   // async componentDidMount() {
   //   this.setState({loading: true});
 
@@ -25,11 +23,6 @@ const App = () => {
   // }
 
 
-  const showAlert = (msg, type) => {
-    setAlert({msg:msg, type:type});
-    setTimeout(() => setAlert(null), 2100);
-  }
-
     return (
       <GithubState>
         <AlertState>
@@ -37,11 +30,11 @@ const App = () => {
       <div className="App">
         <Navbar title="Github Profile Finder" icon="fab fa-github" />
         <div className="container">
-          <Alert alert={alert} />
+          <Alert/>
           <Switch>
             <Route exact path='/' render={props => (
               <Fragment>
-                <Search setAlert={showAlert}/>
+                <Search/>
                 <Users/>
               </Fragment>
             )}></Route>
