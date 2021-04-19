@@ -13,9 +13,7 @@ const AlertState = props => {
 
     
     //SET ALERT
-
-
-return <AlertContext.Provider value={{alert: state.users, user: state.user}}>{props.children}</AlertContext.Provider>
+    return <AlertContext.Provider value={{alert: state, setAlert}}>{props.children}</AlertContext.Provider>
 }
 
 export default AlertState;
